@@ -55,20 +55,18 @@ $font-main: 'Roboto Slab', sans-serif;
 
 /*colors*/
 
-$cool-grey: #b9b8bd;
-$tan: rgba(210, 166, 107, 0.9);
-$white: #ffffff;
-$white-opacity: rgba(255, 255, 255, 0.9);
-$black: #181616;
-$battleship-grey: #747688;
-$black-two: #181818;
-$dark-blue-grey: #252a54;
-$dark-grey-blue: #2b3056;
-$camel: #cb944c;
-$silver: #dddfdf;
-$brownish-grey: #666666;
-$dark-sky-blue: #3eade2;
-$pale-grey: #f0f1f6;
+$ugly-yellow: #e2bf00;
+$sunflower-yellow: #f8d902;
+$warm-grey: #737373;
+$brown-grey: #7c7972;
+$light-grey: #ebe7dd;
+$pinkish-grey: #d6ccc2;
+$goldenrod: #f5d10a;
+$white: #f1efeb;
+$black: #282828;
+$white-two: #ffffff;
+$white-three: #e9e9e9;
+$evergreen: #031c17;
 
 
 
@@ -132,32 +130,30 @@ html {
 
 .wrapper {
 	min-width: 320px;
-	max-width: 1440px;
-	padding: 0 45px 0 45px;
+	max-width: 1200px;
+	//padding: 0 45px 0 45px;
 	margin: 0 auto;
 	position: relative;
 }
 
 /* titles */
-p {
-	font-size: 1em;
-	line-height: 1.1em;
-	padding: 15px 0 15px 0;
-	font-weight: 400;
-}
 
 h1 {
-	font-size: 2em;
-	line-height: 1.1em;
-	padding: 15px 0 15px 0;
-	font-weight: 400;
+	font-size: 2rem;
+
 }
 
 h2 {
-	font-size: 1.8em;
-	line-height: 1.1em;
-	padding: 15px 0 15px 0;
-	font-weight: 400;
+	font-size: 1.8rem;
+
+}
+h3 {
+	font-size: 1.6rem;
+
+}
+
+p {
+	font-size: 1.4rem;
 }
 
 /* text position */
@@ -180,7 +176,9 @@ h2 {
 ------------------------------------------------------------------------------*/
 
 
-.attach {
+
+
+.attach__button {
   display: inline-block;
   font-size: 0;
   text-indent: -999px !important;
@@ -195,10 +193,42 @@ h2 {
 
 
 /*--------------------- NAVBAR -------------------------------------------*/
+.navbar-inverse {
+	border-radius: 0;
+	margin: 0 auto 30px auto;
+	border: none;
+	background: $black;
+	background: url(../img/pattern.png) repeat;
+	
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	position: relative;
+	text-transform: uppercase;
+  color: $white-two;
+  font-size: 1.6rem;
+  line-height: 1.14;
+  &::after {
+  	content: "";
+  	display: block;
+  	position: absolute;
+  	bottom: 24px;
+  	right: 4px;
+  	width: 4px;
+  	height: 4px;
+  	background-color: $goldenrod;
+  	border-radius: 50%;
+  }
+}
 
 
 
 /*--------------------- EOF NAVBAR ---------------------------------------*/
+
+.main-carousel {
+	max-width: 1170px;
+	margin-bottom: 30px;
+}
 
 /*------------------------------------------------------------------------------
                                      
@@ -213,6 +243,33 @@ h2 {
 	text-align:left;
 
 }
+
+.btn-warning {
+    color: $black;
+    background-color: $goldenrod;
+    border: none;
+}
+
+.prices, .services, .calling, .location {
+	background-color: $black;
+	background-clip: content-box;
+	color: $white-two;
+	margin-bottom: 30px;
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	h1 {
+		font-size: 3rem;
+	}
+}
+
+.prices ul {
+	li > a {
+		font-size: 1.4rem;
+	}
+}
+
 
 /*------------------------ SLIDER -----------------------------*/
 
@@ -237,13 +294,23 @@ footer {
 
 /* -----------------------------------------------------------------------------
 
-															RESPONSIVE      (desktop first)
+															RESPONSIVE      
 
 ----------------------------------------------------------------------------- */
 
 //------------------------------------------------------------------------------
-@media (min-width: 1280px) { 
-
+@media (min-width: 768px) { 
+	
+	.navbar-nav>li>a {
+    padding: 20px 29px 16px 15px;
+    &.last {
+    	padding-right: 8px ;
+    	&::after {
+    		display: none;
+    	}
+    }
+	}
+	
 	
 }
 //------------------------------------------------------------------------------

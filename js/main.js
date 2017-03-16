@@ -1,22 +1,37 @@
  "use strict";
 
 
+$(function(){
+	/* placeholder*/	   
+	$('input, textarea').each(function(){
+ 		var placeholder = $(this).attr('placeholder');
+ 		$(this).focus(function(){ $(this).attr('placeholder', '');});
+ 		$(this).focusout(function(){			 
+ 			$(this).attr('placeholder', placeholder);  			
+ 		});
+ 	});
+	/* placeholder*/
+
+});
+
+
+
 /*---------------------------------------------------------------
 
 						attach
 						
 ----------------------------------------------------------------*/
- console.log('kdjfk');
+
 (function() {
-  console.log('kdjfk');
-  var a = document.querySelector('.attach');
+
+  var a = document.querySelector('.attach__button');
   var num = 0;
 
   a.addEventListener("change", function() {
   
     for (var i = 0; i < this.files.length; i++) num++;
   
-    document.querySelector('.val').innerHTML = num;
+    document.querySelector('.attach__val').innerHTML = num;
   
   });
   
@@ -44,7 +59,7 @@
     cache: false,
     processData:false,
     success: function(data, textStatus, jqXHR) {
-            alert('aaaaaaa');
+       $('#myModal').modal('show');
     },
     error: function(jqXHR, textStatus, errorThrown) {
        
