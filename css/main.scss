@@ -175,8 +175,29 @@ p {
                                      
 ------------------------------------------------------------------------------*/
 
+#myform {
+	& p {
+		text-align: right;
+	}
+	
+	font-weight: bold !important;
+	font-size: 1.6rem;
+}
+.contact-form__phone, 
+.contact-form__name {
+	width: 155px;	
+		float: left;
+}
+
+.contact-form__phone {
+	//float: right;
+}
 
 
+.attach {
+	position: relative;
+	float: right;
+}
 
 .attach__button {
   display: inline-block;
@@ -184,10 +205,28 @@ p {
   text-indent: -999px !important;
   width: 40px;
   height: 40px;
-  background: #000;
+  background: #000 url(../img/att.png) no-repeat;
+  background-position: 50% 50%;
   border: none;
   cursor: pointer;
   outline: none;
+  border-radius: 50%
+}
+.attach__val {
+	display: inline-block;
+	position: absolute;
+	top: -2px;
+	right: 25px;
+  width: 17px;
+  height: 17px;
+  background: $goldenrod;
+  background-position: 50% 50%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: $black;
+  padding-left: 4px;
+  font-size: 1.2rem;
   border-radius: 50%
 }
 
@@ -195,7 +234,7 @@ p {
 /*--------------------- NAVBAR -------------------------------------------*/
 .navbar-inverse {
 	border-radius: 0;
-	margin: 0 auto 30px auto;
+	margin: 30px auto 30px auto;
 	border: none;
 	background: $black;
 	background: url(../img/pattern.png) repeat;
@@ -258,19 +297,83 @@ p {
 	ul {
 		padding: 0;
 		margin: 0;
+		list-style: none;
 	}
 	h1 {
 		font-size: 3rem;
 	}
 }
 
-.prices ul {
-	li > a {
-		font-size: 1.4rem;
-	}
+.prices {
+	position: relative;
+	height: 380px;
+	background: $black url(../img/left.png) no-repeat;
+	background-clip: content-box;	
+	background-position: right;
 }
 
-
+.prices__metal {
+	float: left;
+	li > a {
+		cursor: pointer;
+		font-size: 1.4rem;
+		line-height: 3rem;
+		color: $white-two;
+		&.low {
+			font-weight: bold;
+		}
+		&:hover {
+			color: $goldenrod;
+			text-decoration: none;
+		}
+	}
+	i {
+		color: $goldenrod;
+	}
+}
+.prices__content, .services__content {
+	position: relative;
+	padding: 27px 30px 24px 39px;
+}
+.prices__value {
+	background: $black;
+	line-height: 3rem;
+	position: absolute;
+	left: 31%;
+	text-align: right;
+	float: left;
+	z-index: 1;
+}
+.prices__btn, .services__btn {
+	position: absolute;
+	right: 30px;
+	bottom: 0;
+}
+.services__btn {
+	bottom: -150px;	
+}
+.prices__discount {
+	background: $black;
+	font-size: 1.2rem;
+	line-height: 3rem;
+	position: absolute;
+	left: 42%;
+}
+.services {
+	position: relative;
+	height: 380px;
+	background: $black url(../img/car-r.png) no-repeat;
+	background-clip: content-box;	
+	background-position: right;
+}
+.services__content {
+	li > a {
+		cursor: pointer;
+		font-size: 1.4rem;
+		line-height: 3rem;
+		color: $white-two;
+	}
+}
 /*------------------------ SLIDER -----------------------------*/
 
 /*------------------------ EOF SLIDER -----------------------------*/

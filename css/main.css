@@ -118,22 +118,55 @@ p {
                              				HEADER             
                                      
 ------------------------------------------------------------------------------*/
+#myform {
+  font-weight: bold !important;
+  font-size: 1.6rem; }
+  #myform p {
+    text-align: right; }
+
+.contact-form__phone,
+.contact-form__name {
+  width: 155px;
+  float: left; }
+
+.attach {
+  position: relative;
+  float: right; }
+
 .attach__button {
   display: inline-block;
   font-size: 0;
   text-indent: -999px !important;
   width: 40px;
   height: 40px;
-  background: #000;
+  background: #000 url(../img/att.png) no-repeat;
+  background-position: 50% 50%;
   border: none;
   cursor: pointer;
   outline: none;
   border-radius: 50%; }
 
+.attach__val {
+  display: inline-block;
+  position: absolute;
+  top: -2px;
+  right: 25px;
+  width: 17px;
+  height: 17px;
+  background: #f5d10a;
+  background-position: 50% 50%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #282828;
+  padding-left: 4px;
+  font-size: 1.2rem;
+  border-radius: 50%; }
+
 /*--------------------- NAVBAR -------------------------------------------*/
 .navbar-inverse {
   border-radius: 0;
-  margin: 0 auto 30px auto;
+  margin: 30px auto 30px auto;
   border: none;
   background: #282828;
   background: url(../img/pattern.png) repeat; }
@@ -183,12 +216,73 @@ p {
   margin-bottom: 30px; }
   .prices ul, .services ul, .calling ul, .location ul {
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    list-style: none; }
   .prices h1, .services h1, .calling h1, .location h1 {
     font-size: 3rem; }
 
-.prices ul li > a {
-  font-size: 1.4rem; }
+.prices {
+  position: relative;
+  height: 380px;
+  background: #282828 url(../img/left.png) no-repeat;
+  background-clip: content-box;
+  background-position: right; }
+
+.prices__metal {
+  float: left; }
+  .prices__metal li > a {
+    cursor: pointer;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    color: #ffffff; }
+    .prices__metal li > a.low {
+      font-weight: bold; }
+    .prices__metal li > a:hover {
+      color: #f5d10a;
+      text-decoration: none; }
+  .prices__metal i {
+    color: #f5d10a; }
+
+.prices__content, .services__content {
+  position: relative;
+  padding: 27px 30px 24px 39px; }
+
+.prices__value {
+  background: #282828;
+  line-height: 3rem;
+  position: absolute;
+  left: 31%;
+  text-align: right;
+  float: left;
+  z-index: 1; }
+
+.prices__btn, .services__btn {
+  position: absolute;
+  right: 30px;
+  bottom: 0; }
+
+.services__btn {
+  bottom: -150px; }
+
+.prices__discount {
+  background: #282828;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  position: absolute;
+  left: 42%; }
+
+.services {
+  position: relative;
+  height: 380px;
+  background: #282828 url(../img/car-r.png) no-repeat;
+  background-clip: content-box;
+  background-position: right; }
+
+.services__content li > a {
+  cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  color: #ffffff; }
 
 /*------------------------ SLIDER -----------------------------*/
 /*------------------------ EOF SLIDER -----------------------------*/

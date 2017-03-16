@@ -37,15 +37,15 @@
     
       <section class="col-md-4 outl-red">
         <form id="myform" class="contact-form row" action="send.php" method="post" enctype="multipart/form-data" onsubmit="fbtn.disabled = true; return true;">
-          <h3>БЕСПЛАТНАЯ ОЦЕНКА ЛОМА!</h3>
-          <p class="">Вызовите специалиста или пришлите фотографии</p>
-          <input id="name" type="text" name="name" class="contact-form__name" placeholder="Имя:" value="" required>
-          <input id="phone" type="text" name="phone" class="contact-form__phone" placeholder="Телефон:"  value="" required>
+          <p>БЕСПЛАТНАЯ ОЦЕНКА ЛОМА!</>
+          <p class="small">Вызовите специалиста или пришлите фотографии</p>
+          <input id="name" type="text" name="name" class="contact-form__name form-control" placeholder="Имя:" value="" required>
+          <input id="phone" type="text" name="phone" class="contact-form__phone form-control" placeholder="Телефон:"  value="" required>
           <div class="attach">
             <span class="attach__val"></span>
             <input name="userfile[]" type="file" class="attach__button" multiple>
           </div>
-        <input id="fbtn" class="contact-form__submit " type="submit" name="submit" value="Отправить запрос">
+        <input id="fbtn" class="contact-form__submit btn btn-warning" type="submit" name="submit" value="Отправить запрос">
         </form>
       </section>
     
@@ -119,26 +119,55 @@
   
     <div class="row">
       <div class="col-sm-8 prices">
-        <div class="prices__content">
+        <div class="prices__content clearfix outl-green">
           <h1>ПРИЕМ МЕТАЛЛОЛОМА</h1>
-          <ul>
-            <li><a class="low">Черный лом</a>......12,5 руб.</li>
-            <li><a class="low">Аккумуляторы</a>....58 руб.</li>
-            <li><a class="low">Медь</a>............300 руб.</li>
-            <li><a class="low">Бронза</a>..........185 руб.</li>
-            <li><a class="">Латунь</a>.............159 руб.</li>
-            <li><a class="">Алюминий</a>...........85 руб.</li>
-            <li><a class="">Нержавейка</a>.........59 руб.</li>
-            <li><a class="">Свинец</a>.............90 руб.</li>
+          <ul class="prices__metal">
+            <li><a class="low">Черный лом</a><i>.................................................</i></li>
+            <li><a class="low">Аккумуляторы</a><i>.............................................</i></li>
+            <li><a class="low">Медь</a><i>...............................................................</i></li>
+            <li><a class="low">Бронза</a><i>...........................................................</i></li>
+            <li><a class="">Латунь</a><i>..........................................</i></li>
+            <li><a class="">Алюминий</a><i>................................</i></li>
+            <li><a class="">Нержавейка</a><i>..............................</i></li>
+            <li><a class="">Свинец</a><i>......................................</i></li>
           </ul>
-          <button type="button" class="btn btn-warning">Все цены</button>
+          <ul class="prices__value">
+            <li>12,5 руб.</li>
+            <li>58 руб.</li>
+            <li>300 руб.</li>
+            <li>185 руб.</li>
+            <li>159 руб.</li>
+            <li>85 руб.</li>
+            <li>59 руб.</li>
+            <li>90 руб.</li>
+          </ul>
+          <ul class="prices__discount">
+            <li>Низкая цена!</li>
+            <li>Низкая цена!</li>
+            <li>Низкая цена!</li>
+            <li>Низкая цена!</li>
+          </ul>
+          <button type="button" class="btn btn-warning prices__btn">Все цены</button>
         </div>
           
 
       </div>
       <div class="col-sm-4 services">
-        <h1>УСЛУГИ</h1>
-        
+        <div class="services__content">
+          <h1>УСЛУГИ</h1>
+          <ul>
+            <li>
+              <a href="#">Оценка</a>
+            </li>
+            <li>
+              <a href="#">Демонтаж</a>
+            </li>
+            <li>
+              <a href="#">Вывоз</a>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-warning services__btn">Все услуги</button>
+        </div>
   
       </div>
     </div>
@@ -195,60 +224,6 @@
     </div>
   </div>
 
-
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid">
-  <h3 class="text-center">Contact</h3>
-  <p class="text-center"><em>We love our fans!</em></p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <p>Fan? Drop a note.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
-    </div>
-    <div class="col-md-8">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-      <br>
-      <div class="row">
-        <div class="col-md-12 form-group">
-          <button class="btn pull-right" type="submit">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br>
-  <h3 class="text-center">From The Blog</h3>  
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Mike</a></li>
-    <li><a data-toggle="tab" href="#menu1">Chandler</a></li>
-    <li><a data-toggle="tab" href="#menu2">Peter</a></li>
-  </ul>
-
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h2>Mike Ross, Manager</h2>
-      <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-      <h2>Chandler Bing, Guitarist</h2>
-      <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h2>Peter Griffin, Bass player</h2>
-      <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
-    </div>
-  </div>
-</div>
 
 <!-- Add Google Maps -->
 <div id="googleMap"></div>
