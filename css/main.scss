@@ -213,6 +213,9 @@ p {
     background: $goldenrod;
     border-radius: 50%;
     opacity: 1;
+    &:focus {
+    	outline: none;
+    }
 }
 
 /*------------------------------- logo ---------------------------------*/
@@ -495,9 +498,6 @@ p {
 	}
 }
 
-.prices {
-	
-}
 
 .prices__content,
 .services__content,
@@ -519,7 +519,7 @@ p {
 	display: inline-block;
 	position: relative;
 	height: 100%;
-	//width: 30%;
+
 	overflow: hidden;
 }
 .prices__left {
@@ -540,7 +540,6 @@ p {
 }
 
 .prices__metal {
-	//float: left;
 	li > a {
 		cursor: pointer;
 		font-size: 1.4rem;
@@ -562,10 +561,7 @@ p {
 .prices__value {
 	background: $black;
 	line-height: 3rem;
-	//position: absolute;
-	//left: 31%;
 	text-align: right;
-	//float: left;
 	z-index: 1;
 }
 .prices__discount {
@@ -622,18 +618,7 @@ p {
 .location__content{
 	background: $black;
 	overflow: hidden;
-	// &::after {
-	// 	content:'';
-	// 	display: block;
-	// 	width: 100px;
-	// 	height: 380px;
-	// 	position: absolute;
-	// 	left: 0;
-	// 	top: 0;
-	// 	background:  url("../img/big-mask.png") no-repeat;
-	// 	background-position: 0%;
-	// 	overflow: visible;
-	// 
+
 }
 .location-info {
 	display: inline-block;
@@ -666,8 +651,8 @@ p {
 
 .yanmap {
 	position: absolute;
-	right: -130px;
-	bottom: -40px;
+	right: -135px;
+	bottom: -10px;
 }
 /*------------------------ SLIDER -----------------------------*/
 
@@ -741,7 +726,9 @@ p {
 //------------------------------------------------------------------------------
 @media (max-width: 1300px) { 
 
-	
+	.prices__left {
+    width: 20%;
+	}
 }
 //------------------------------------------------------------------------------
 
