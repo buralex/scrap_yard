@@ -60,6 +60,7 @@ $sunflower-yellow: #f8d902;
 $warm-grey: #737373;
 $brown-grey: #7c7972;
 $light-grey: #ebe7dd;
+$light-grey-two: #ded9cb;
 $pinkish-grey: #d6ccc2;
 $goldenrod: #f5d10a;
 $white: #f1efeb;
@@ -140,7 +141,6 @@ html {
 
 h1 {
 	font-size: 2rem;
-
 }
 
 h2 {
@@ -149,7 +149,7 @@ h2 {
 }
 h3 {
 	font-size: 1.6rem;
-
+	font-weight: 700;
 }
 
 p {
@@ -164,9 +164,21 @@ p {
 
 
 /* loader */
-.loaded .main-wrapper{visibility:hidden;}
-.icon-load{background:url(../img/loader.gif) no-repeat left top;width:40px;height:40px;position:fixed;left:50%;top:50%;margin-left:-20px;margin-left:-20px;display:none;}
-.loaded .icon-load{display:block;}
+.loaded .main-wrapper {
+	visibility:hidden;
+}
+.icon-load {
+	background:url(../img/loader3.gif) no-repeat left top;
+	width:40px;height:40px;position:fixed;
+	left:50%;
+	top:20px;
+	margin-left:-20px;
+	margin-left:-20px;
+	display:none;
+}
+.loaded .icon-load {
+	display:block;
+}
 
 
 /*------------------------------------------------------------------------------
@@ -175,18 +187,152 @@ p {
                                      
 ------------------------------------------------------------------------------*/
 
-#myform {
-	& p {
-		text-align: right;
+.main-header {
+	
+}
+#contactModal {
+	text-align: center;
+	h1 {
+		color: $black;
+		font-size: 3rem;
+		line-height: 3.6rem;
+	}
+	p {
+		color: $brown-grey;
+		font-size: 2rem;
+		line-height: 3.6rem;
+	}
+}
+
+.modal-header .close {
+    margin-top: -2px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: $white-two;
+    background: $goldenrod;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+/*------------------------------- logo ---------------------------------*/
+.logo {
+	margin: 55px 0 0 0;
+	a {
+		text-decoration: none;
+		font-size: 3.8rem;
+		font-weight: bold;
+		color: $evergreen;
+	}
+	.name__half {
+		color: $white-two;
+		background: $black;
+		border-bottom: 6px solid $goldenrod;
+	}
+	figcaption {
+		font-size: 1.6rem;
+		letter-spacing: 2.4px;
+		color: $warm-grey;
+	}
+}
+
+.logo--foo {
+	margin: 0 0 0 0;
+	a {
+		text-decoration: none;
+		font-size: 2.3rem;
+		font-weight: bold;
+		color: $evergreen;
+	}
+	.name__half {
+		color: $white-two;
+		background: $black;
+		border-bottom: none;
+	}
+	figcaption {
+		font-size: 0.9rem;
+		letter-spacing: 1.7px;
+		color: $warm-grey;
+	}
+}
+
+/*------------------------------- info ---------------------------------*/
+.info__phone {
+	a {
+		text-decoration: none;
+		color: $evergreen;
+		font-weight: bold;
+		font-size: 2rem;
 	}
 	
-	font-weight: bold !important;
-	font-size: 1.6rem;
+	margin: 60px 0 0 0;
 }
+.phone-icon {
+	margin-right: 6px;
+	display: inline-block;
+	width: 12px;
+	height: 15px;
+	background: url(../img/phone-icon.png) no-repeat;
+}
+.info__hours {
+	color: $brown-grey;
+}
+.info__call {
+	position: absolute;
+	top: 65px;
+	right: 15px;
+	display: inline-block;
+	background: $goldenrod url(../img/call.png) no-repeat;
+	background-position: 50% 50%;
+  width: 49px;
+  height: 49px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+
+/*------------------------------- form ---------------------------------*/
+.contact-form {
+	h3 {
+		margin: 30px 0 5px 0;
+	}
+	p {
+		margin: 0 0 10px 0;
+		color: $brown-grey;
+	}
+	::-webkit-input-placeholder {color: $brown-grey;}
+	::-moz-placeholder          {color: $brown-grey;}/* Firefox 19+ */
+	:-moz-placeholder           {color: $brown-grey;}/* Firefox 18- */
+	:-ms-input-placeholder      {color: $brown-grey;}
+}
+
+.form-control:focus {
+	border-color: $black;
+	box-shadow: none;
+}
+
+
+#myform {
+	//font-weight: bold !important;
+	//font-size: 1.6rem;
+}
+
 .contact-form__phone, 
 .contact-form__name {
-	width: 155px;	
-		float: left;
+	width: 155px;
+	height: 40px;
+	background: $light-grey;
+	border: solid 2px $light-grey-two;;
+	display: inline-block;
+	margin: 0 10px 10px 0;
+}
+.contact-form__phone--big {
+	width: 100%;
+	margin-bottom: 20px;
+	&:focus {
+		border-color: $goldenrod;
+	}
 }
 
 .contact-form__phone {
@@ -196,38 +342,45 @@ p {
 
 .attach {
 	position: relative;
-	float: right;
+	display: inline-block;
+	vertical-align: bottom;
+	width: 40px;
+  height: 40px;
+  background: #000 url(../img/att.png) no-repeat;
+  background-position: 50% 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .attach__button {
   display: inline-block;
   font-size: 0;
-  text-indent: -999px !important;
+  opacity: 0;
   width: 40px;
   height: 40px;
-  background: #000 url(../img/att.png) no-repeat;
-  background-position: 50% 50%;
-  border: none;
   cursor: pointer;
-  outline: none;
-  border-radius: 50%
+  border-radius: 50%;
 }
+
 .attach__val {
-	display: inline-block;
+	display: block;
 	position: absolute;
 	top: -2px;
 	right: 25px;
-  width: 17px;
-  height: 17px;
+  min-width: 17px;
+  min-height: 17px;
   background: $goldenrod;
-  background-position: 50% 50%;
   border: none;
   cursor: pointer;
   outline: none;
   color: $black;
-  padding-left: 4px;
+  line-height: 17px;
   font-size: 1.2rem;
-  border-radius: 50%
+  border-radius: 50%;
+  text-align: center;
 }
 
 
@@ -237,7 +390,7 @@ p {
 	margin: 30px auto 30px auto;
 	border: none;
 	background: $black;
-	background: url(../img/pattern.png) repeat;
+	background: url(../img/pattern.jpg) repeat;
 	
 }
 
@@ -260,6 +413,44 @@ p {
   }
 }
 
+.navbar--foo {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	//background: none;
+	//margin: 10px auto 30px auto;
+}
+
+.navbar--foo li > a{
+	position: relative;
+	padding: 10px 13px 10px 13px;
+	float:left;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	&:hover {
+		//color: $evergreen;
+		text-decoration: none;
+	}
+	
+	color: $black;
+	  &::after {
+  	content: "";
+  	display: block;
+  	position: absolute;
+  	bottom: 20px;
+  	right: -1px;
+  	width: 3px;
+  	height: 3px;
+  	background-color: $black;
+  	border-radius: 50%;
+  }
+  &.last {
+  	padding-right: 8px ;
+  	&::after {
+  		display: none;
+  	}
+  }
+}
 
 
 /*--------------------- EOF NAVBAR ---------------------------------------*/
@@ -284,36 +475,72 @@ p {
 }
 
 .btn-warning {
-    color: $black;
-    background-color: $goldenrod;
-    border: none;
+	font-weight: bold;
+  color: $black;
+  background-color: $goldenrod;
+  border: none;
 }
 
 .prices, .services, .calling, .location {
-	background-color: $black;
-	background-clip: content-box;
+	position: relative;
 	color: $white-two;
 	margin-bottom: 30px;
-	ul {
-		padding: 0;
-		margin: 0;
-		list-style: none;
+	p {
+		line-height: 2;
 	}
+
 	h1 {
 		font-size: 3rem;
+		margin-bottom: 25px;
 	}
 }
 
 .prices {
+	
+}
+
+.prices__content,
+.services__content,
+.calling__content,
+.location__content {
 	position: relative;
+	padding: 20px 30px 25px 30px;
 	height: 380px;
-	background: $black url(../img/left.png) no-repeat;
-	background-clip: content-box;	
-	background-position: right;
+}
+
+.prices__content {
+	background: $black url(../img/left-bg.png) no-repeat;
+	background-position: right;	
+}
+
+.prices__left, .prices__middle, .prices__right {
+	white-space: nowrap;
+	vertical-align: top;
+	display: inline-block;
+	position: relative;
+	height: 100%;
+	//width: 30%;
+	overflow: hidden;
+}
+.prices__left {
+	width: 28%;
+}
+.prices__right {
+
+}
+	
+
+.prices__metal,
+.prices__value,
+.prices__discount,
+.services-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;	
 }
 
 .prices__metal {
-	float: left;
+	//float: left;
 	li > a {
 		cursor: pointer;
 		font-size: 1.4rem;
@@ -331,48 +558,116 @@ p {
 		color: $goldenrod;
 	}
 }
-.prices__content, .services__content {
-	position: relative;
-	padding: 27px 30px 24px 39px;
-}
+
 .prices__value {
 	background: $black;
 	line-height: 3rem;
-	position: absolute;
-	left: 31%;
+	//position: absolute;
+	//left: 31%;
 	text-align: right;
-	float: left;
+	//float: left;
 	z-index: 1;
 }
-.prices__btn, .services__btn {
-	position: absolute;
-	right: 30px;
-	bottom: 0;
-}
-.services__btn {
-	bottom: -150px;	
-}
 .prices__discount {
+	padding: 0 5px 0 0;
 	background: $black;
 	font-size: 1.2rem;
 	line-height: 3rem;
-	position: absolute;
-	left: 42%;
+	i {
+		color: $goldenrod;
+	}
 }
+
+.prices__btn, .services__btn {
+	position: absolute;
+	right: 30px;
+	bottom: 25px;
+}
+.services__btn {
+	//bottom: -150px;	
+}
+
 .services {
 	position: relative;
-	height: 380px;
-	background: $black url(../img/car-r.png) no-repeat;
-	background-clip: content-box;	
-	background-position: right;
 }
 .services__content {
+	background: $black url(../img/right-bg.png) no-repeat;
+	background-position: 100%;
 	li > a {
 		cursor: pointer;
 		font-size: 1.4rem;
 		line-height: 3rem;
 		color: $white-two;
+		&:hover {
+			color: $goldenrod;
+			text-decoration: none;
+		}
+		&::after {
+			font-family: 'Glyphicons Halflings';
+			content: "\e080";
+			display: inline-block;
+			// line-height: 1.4rem;
+			font-size: 1rem;
+			padding: 4px;
+			color: $goldenrod;
+		}
 	}
+}
+
+
+.calling__content {
+	background: $black;
+}
+
+.location__content{
+	background: $black;
+	overflow: hidden;
+	// &::after {
+	// 	content:'';
+	// 	display: block;
+	// 	width: 100px;
+	// 	height: 380px;
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 0;
+	// 	background:  url("../img/big-mask.png") no-repeat;
+	// 	background-position: 0%;
+	// 	overflow: visible;
+	// 
+}
+.location-info {
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+	
+	.bottom {
+		line-height: 4.7rem;
+	}
+}
+
+#mask {
+	overflow: visible;
+	position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.phone-small {
+	text-decoration: none;
+	font-size: 1.4rem;
+	color: $goldenrod;
+	font-weight: bold;
+	&:hover {
+		text-decoration: none;
+		color: $goldenrod;
+	}
+}
+
+.yanmap {
+	position: absolute;
+	right: -130px;
+	bottom: -40px;
 }
 /*------------------------ SLIDER -----------------------------*/
 
@@ -386,11 +681,23 @@ p {
                                      
 ------------------------------------------------------------------------------*/
 
-footer {
-	padding: 5px;
-	text-align:left;
+.main-footer {
+	text-align: left;
+	margin-top: 60px;
+	padding: 20px 0 30px 0;
 	width:100%;
-	min-width: 320px;
+	position: absolute;
+	bottom: 0;
+	background: $white;
+}
+
+.info__phone--foo, .info__hours--foo {
+	display: inline-block;
+}
+
+.info__phone--foo {
+	margin-top: 0;
+	margin-right: 24px;
 }
 
 
@@ -412,6 +719,10 @@ footer {
     		display: none;
     	}
     }
+	}
+	.modal-dialog {
+    width: 600px;
+    margin: 300px auto;
 	}
 	
 	

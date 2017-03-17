@@ -12,7 +12,7 @@ function test_input($data) {
 $nameErr = $phoneErr = "";
 $name = $phone = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["name"]) && isset($_POST["phone"]) ) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["phone"]) ) {
   
   if ($_SERVER['REQUEST_METHOD']=="POST") {
 
