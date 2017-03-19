@@ -23,7 +23,7 @@
   <header class="main-header">
     <div class="container-fluid wrapper ">
       <div class="row">
-        <section class="col-xs-3 ">
+        <section class="col-md-3 col-lg-3 ">
           <figure class="logo logo--desktop logo--mob ">
             <a href="#">
               <span class="name">ПРИЁМ<span class="name__half">ЛОМА</span></span>
@@ -32,7 +32,7 @@
           </figure>
         </section>
         
-        <section class="info col-xs-3 col-xs-push-1 ">
+        <section class="info col-md-3 col-lg-3 col-lg-push-1 ">
           <p class="info__phone"><a class="phone" href="tel:8(812)924-26-06"><span class="phone-icon"></span>8 (812) 924-26-06</a></p>
           <p class="info__hours">Работаем: <br> с 09:00 до 20:00 ежедневно !</p>
           <a class="info__call"></a>
@@ -40,7 +40,7 @@
         
         <!-- CONTACT FORM -->
         
-          <section class="col-md-5 col-xs-push-1 text-right ">
+          <section class="col-lg-5 col-lg-push-1 text-right ">
             <form id="mainform" class="contact-form" action="send.php" method="post" enctype="multipart/form-data" onsubmit="fbtn.disabled = true; return true;">
               <h3>БЕСПЛАТНАЯ ОЦЕНКА ЛОМА!</h3>
               <p class="small">Вызовите специалиста или пришлите фотографии</p>
@@ -129,63 +129,84 @@
       <div class="col-sm-8 prices">
       
         <div class="prices__content ">
-          <h1>ПРИЕМ МЕТАЛЛОЛОМА</h1>
-          <div class="prices__left">
-            <ul class="prices__metal">
-              <li><a class="low">Черный лом</a><i>........................................................</i></li>
-              <li><a class="low">Аккумуляторы</a><i>.......................................................</i></li>
-              <li><a class="low">Медь</a><i>...............................................................</i></li>
-              <li><a class="low">Бронза</a><i>.............................................................</i></li>
-              <li><a class="">Латунь</a><i>................................................................</i></li>
-              <li><a class="">Алюминий</a><i>..............................................................</i></li>
-              <li><a class="">Нержавейка</a><i>............................................................</i></li>
-              <li><a class="">Свинец</a><i>................................................................</i></li>
-            </ul>
-          </div>
-          
-          <div class="prices__middle">
-            <ul class="prices__value">
-              <li>12,5 руб.</li>
-              <li>58 руб.</li>
-              <li>300 руб.</li>
-              <li>185 руб.</li>
-              <li>159 руб.</li>
-              <li>85 руб.</li>
-              <li>59 руб.</li>
-              <li>90 руб.</li>
-            </ul>
-          </div>
-          
-          <div class="prices__right">
-            <ul class="prices__discount">
-              <li><i>....... </i><span>Низкая цена!</span></li>
-              <li><i>....... </i><span>Низкая цена!</span></li>
-              <li><i>....... </i><span>Низкая цена!</span></li>
-              <li><i>....... </i><span>Низкая цена!</span></li>
-            </ul>
+          <div class="pseudo-table">
+            <h1>ПРИЕМ МЕТАЛЛОЛОМА</h1>
+            <div class="prices__left">
+              <ul class="prices__metal">
+                <li><a class="low">Черный лом</a><i>........................................................</i></li>
+                <li><a class="low">Аккумуляторы</a><i>.......................................................</i></li>
+                <li><a class="low">Медь</a><i>...............................................................</i></li>
+                <li><a class="low">Бронза</a><i>.............................................................</i></li>
+                <li><a class="">Латунь</a><i>................................................................</i></li>
+                <li><a class="">Алюминий</a><i>..............................................................</i></li>
+                <li><a class="">Нержавейка</a><i>............................................................</i></li>
+                <li><a class="">Свинец</a><i>................................................................</i></li>
+              </ul>
+            </div>
+
+            <div class="prices__middle">
+              <ul class="prices__value">
+                <li>12,5 руб.</li>
+                <li>58 руб.</li>
+                <li>300 руб.</li>
+                <li>185 руб.</li>
+                <li>159 руб.</li>
+                <li>85 руб.</li>
+                <li>59 руб.</li>
+                <li>90 руб.</li>
+              </ul>
+            </div>
+
+            <div class="prices__right">
+              <ul class="prices__discount">
+                <li><i>....... </i><span>Низкая цена!</span></li>
+                <li><i>....... </i><span>Низкая цена!</span></li>
+                <li><i>....... </i><span>Низкая цена!</span></li>
+                <li><i>....... </i><span>Низкая цена!</span></li>
+              </ul>
+            </div>
           </div>
   
           <button type="button" class="btn btn-warning prices__btn">ВСЕ ЦЕНЫ</button>
       
+        </div>
+        <div class="prices__img">
+          <svg id="mask--prices" height="380" width="5">
+            <polygon points="193,0 20,285 88,380 0,380 0,0" style="fill:#282828;" />
+            
+            <polyline points="188,-3 13,285 81,380  "
+            style="fill:none;stroke:#f5d10a;stroke-width:3" />
+          </svg>
         </div>
       
       </div>
       
       <div class="col-sm-4 services">
         <div class="services__content">
-          <h1>УСЛУГИ</h1>
-          <ul class="services-list">
-            <li>
-              <a href="#">Оценка</a>
-            </li>
-            <li>
-              <a href="#">Демонтаж</a>
-            </li>
-            <li>
-              <a href="#">Вывоз</a>
-            </li>
-          </ul>
+          
+          <div class="pseudo-table">
+            <h1>УСЛУГИ</h1>
+            <ul class="services-list">
+              <li>
+                <a href="#">Оценка</a>
+              </li>
+              <li>
+                <a href="#">Демонтаж</a>
+              </li>
+              <li>
+                <a href="#">Вывоз</a>
+              </li>
+            </ul>
+          </div>
           <button type="button" class="btn btn-warning services__btn">ВСЕ УСЛУГИ</button>
+        </div>
+        <div class="services__img">
+          <svg id="mask--services" height="380" width="5">
+            <polygon points="193,0 20,285 88,380 0,380 0,0" style="fill:#282828;" />
+            
+            <polyline points="188,-3 13,285 81,380  "
+            style="fill:none;stroke:#f5d10a;stroke-width:3" />
+          </svg>
         </div>
         
       </div>
@@ -219,12 +240,14 @@
             <p>г. Санкт-Петербург, ул. Калинина, 39 <br>(ст. метро «Нарвская»)</p>
             <p class="bottom"><a class="phone-small" href="tel:8(812)924-26-06"><span>8 (812) 924-26-06</span></a> <br> priem-loma@yandex.ru <br> Работаем: ежедневно с 09:00 до 20:00</p>
           </div>
-          <svg id="mask" height="380" width="50">
-            <polygon points="543,0 370,285 438,380 0,380 0,0" style="fill:#282828;" />
-            
-            <polyline points="538,-3 363,285 431,380  "
-            style="fill:none;stroke:#f5d10a;stroke-width:3" />
-          </svg>
+          <div class="mask-container outl">
+            <svg id="mask" height="380" width="5">
+              <polygon points="193,0 20,285 88,380 0,380 0,0" style="fill:#282828;" />
+              
+              <polyline points="188,-3 13,285 81,380  "
+              style="fill:none;stroke:#f5d10a;stroke-width:3" />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
