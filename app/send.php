@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["phone"]) ) {
   //This should be done in your php.ini, but this is how to do it if you don"t have access to that
   date_default_timezone_set("Europe/Kiev");
 
-  $path .="phpmailer/PHPMailerAutoload.php";
+  $path .="libs/phpmailer/PHPMailerAutoload.php";
 
   require $path;
 
