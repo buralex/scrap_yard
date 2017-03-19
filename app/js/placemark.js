@@ -16,7 +16,7 @@
 	        myPlacemark2 = new ymaps.Placemark([59.896373, 30.251450], {
 	                balloonContent: ''
 	            	}, {
-	            	iconImageHref: '../img/mark.png',
+	            	iconImageHref: 'http://buralex.tk/scrap/img/mark.png',
 	            	iconImageSize: [38, 36]
 	            	
 	                

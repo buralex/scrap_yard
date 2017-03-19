@@ -486,6 +486,7 @@ p {
 }
 
 .prices, .services, .calling, .location {
+	overflow: hidden;
 	position: relative;
 	color: $white-two;
 	margin-bottom: 30px;
@@ -527,7 +528,7 @@ p {
 .services__img {
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: 15px;
 	height: 100%;
 	width: 281px;
 	background: $black url(../img/right-bg.png) no-repeat;
@@ -665,7 +666,7 @@ p {
 }
 .mask-container {
 	background: $black;
-	width: 285px;
+	width: 360px;
 	height: 100%;
 	position: absolute;
 	left: 0;
