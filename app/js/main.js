@@ -128,7 +128,7 @@ function stickyFooter(footerContainer, wrapCont) {
   
   
   /*----------------------- callback form -----------------------------*/
-  $("#secondFormpinkish-greypinkish-grey").on('submit' , function(e) {
+  $("#secondForm").on('submit' , function(e) {
     //alert('fff');
     $('.icon-load').show();
     var formObj = $(this);
