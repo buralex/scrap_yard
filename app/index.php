@@ -46,7 +46,7 @@
         <!-- CONTACT FORM -->
         
           <section class="col-xs-12 col-md-5 col-lg-5 col-lg-push-1 text-right text-c-left">
-            <form id="mainform" class="contact-form" action="send.php" method="post" enctype="multipart/form-data" onsubmit="fbtn.disabled = true; return true;">
+            <form id="mainform" class="contact-form" action="" method="post" enctype="multipart/form-data" onsubmit="fbtn.disabled = true; return true;">
               <h3>БЕСПЛАТНАЯ ОЦЕНКА ЛОМА!</h3>
               <p class="small">Вызовите специалиста или пришлите фотографии</p>
               <input type="text" name="name" class="contact-form__name form-control" placeholder="Имя:" value="" required>
@@ -227,7 +227,7 @@
         <div class="calling__content text-left">
           <h1>БЕСПЛАТНЫЙ <br> ВЫЗОВ</h1>
           <p><a class="phone-small" href="tel:8(812)924-26-06"><span>8 (812) 924-26-06</span></a> <br> или оставьте свой контактный номер –<br> и мы Вам перезвоним!</p>
-          <form id="secondForm" class="contact-form" action="send.php" method="post" enctype="multipart/form-data" onsubmit="fbtn2.disabled = true; return true;">
+          <form id="secondForm" class="contact-form" action="" method="post" enctype="multipart/form-data" onsubmit="fbtn2.disabled = true; return true;">
             <input type="text" name="phone" class="contact-form__phone contact-form__phone--big form-control" placeholder="Телефон:"  value="" required>
             <input id="fbtn2" class="contact-form__submit btn btn-warning" type="submit" name="submit" value="ЗАКАЗАТЬ ЗВОНОК">
           </form>
