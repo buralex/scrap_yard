@@ -1,3 +1,6 @@
+<?php
+    require_once __DIR__ . '/autoload.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +9,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="<?= Site::url() . '/css/main.css' ?>">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
-  <script src="js/jquery.min.js"></script>
+  <script src="<?= Site::url() . '/js/jquery.min.js' ?>"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
 
-	<script src="js/placemark.js" type="text/javascript"></script>
+	<script src="<?= Site::url() . '/js/placemark.js' ?>" type="text/javascript"></script>
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" class="loaded">
@@ -312,7 +315,7 @@
 </div>
 
 
-<script src="js/main.js"></script>
+<script src="<?= Site::url() . '/js/main.js' ?>"></script>
  
 
 <script>
